@@ -1,2 +1,6 @@
+# Fire ignore
 .DS_Store
+
+# Directory ignore
+IgnoreMemo/
 node_modules/
