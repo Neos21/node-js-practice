@@ -1,0 +1,22 @@
+{
+  "name": "node-js-test",
+  "version": "0.0.0",
+  "description": "Node.js Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Neos21GitHub/NodeJsTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Neos21GitHub/NodeJsTest/issues"
+  },
+  "homepage": "https://github.com/Neos21GitHub/NodeJsTest#readme",
+  "devDependencies": {
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
