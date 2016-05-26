@@ -9815,9 +9815,11 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
+// Browserify で jQuery を読み込む
 var $ = require("jquery");
 
+// jQuery の使用テスト
 $(function() {
-	console.log("Test.");
+  console.log("jQuery Test.");
 });
 },{"jquery":1}]},{},[2]);
