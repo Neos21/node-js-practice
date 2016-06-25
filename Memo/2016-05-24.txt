@@ -1,0 +1,92 @@
+2016-05-24 Node.js のテスト
+
+/Users/Neo/Documents/Dev/NodeJsTest/
+を作成。ココに移動。
+
+$ node init
+で package.json が作れる。
+
+任意のディレクトリで実行すると HTTP サーバが立てられる http-server を入れる
+$ npm install -g http-server
+
+上記のフォルダで
+$ http-server
+とやって
+http://0.0.0.0:8080/
+でアクセスできる。
+
+jQuery を入れてみる
+$ npm install jquery --save--dev
+
+$ touch src.js
+以下のように書いてみる。
+
+```
+var $ = require('jquery');
+$(function() {
+  console.log("Test.");
+});
+```
+
+Browserify ができれば動くはず。
+
+$ touch index.html
+main.js という別ファイルを読み込むように書いておいた。
+
+$ touch gulpfile.js
+以下のように書く。
+
+```
+var gulp = require(“gulp”);
+var browserify = require(“browserify”);
+
+// 「build-js」がタスク名になる。「gulp build-js」で呼べる。
+gulp.task(“build-js”, function () {
+  return browserify({
+    entries: “./src.js” // どのファイルをビルドするか
+  }).bundle()           // browserify の実行
+  .pipe(gulp.dest(“./main.js”)); // 出力するファイル
+});
+```
+
+$ gulp build-js
+[12:05:25] Local gulp not found in ~/Documents/Dev/NodeJsTest
+[12:05:25] Try running: npm install gulp
+その場で gulp しようとしたらダメだった。
+
+$ npm install gulp --save--dev
+作業ディレクトリにインストールしてみる。
+
+$ gulp build-js
+Error: Cannot find module 'browserify'
+まだダメ。
+
+$ npm install browserify --save--dev
+Browserify も作業ディレクトリにインストール。
+
+$ gulp build-js
+[12:11:57] Using gulpfile ~/Documents/Dev/NodeJsTest/gulpfile.js
+[12:11:57] Starting 'build-js'...
+path.js:7
+    throw new TypeError('Path must be a string. Received ' + inspect(path));
+動いたが構文が違うっぽい？どうも途中で型変換がいるらしい。
+
+$ npm install vinyl-source-stream --save-dev
+これをインストールして、書き換えた。
+
+```
+var gulp = require(“gulp”);
+var browserify = require(“browserify”);
+var source = require(“vinyl-source-stream”);
+
+gulp.task(“build-js”, function () {
+  browserify({
+    entries: [“./src.js”]
+  })
+  .bundle()                // Browserify の実行
+  .pipe(source(“main.js”)) // 型変換がいるらしい
+  .pipe(gulp.dest('./'));  // 出力
+});
+```
+
+できた。

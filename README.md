@@ -1,3 +1,3 @@
-# Node.js Test
+﻿# Node.js Test
 
-Node.js とそれにまつわる JavaScript のライブラリを色々試してみるリポジトリです。
+Node.js と、それにまつわる JavaScript のライブラリを色々試してみるリポジトリです。
