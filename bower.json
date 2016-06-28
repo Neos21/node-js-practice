@@ -1,0 +1,19 @@
+{
+  "name": "node-js-test",
+  "description": "Node.js Test",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "^1.8.3",
+    "bootstrap": "^3.3.6"
+  }
+}

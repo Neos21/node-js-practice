@@ -1,0 +1,45 @@
+2016-06-25 Bower を試す
+
+まずは Bower 自体をグローバルインストール。済んでいれば別に良い
+$ npm install -g bower
+
+bower を使うディレクトリに移動し、init から始める。
+$ bower init
+
+いくつか質問される。
+ライブラリ名とかは package.json があるとその内容をパクってきてサジェストしてくれたりするようなので、Enter ばっかりで OK。
+質問事項の3つは全て Yes で良い。
+bower.json ってファイルができる。
+
+次に jQuery を入れてみる。
+$ bower install jquery --save
+
+コマプロだと上手く動かなかった。Git Bash でやったら上手くいった。
+/bower_components/jquery/ ってフォルダができてる。
+--save で bower.json に依存関係が書ける。
+
+※dependencies が書かれると、
+  $ bower install
+  でインストールができるようになる。npm と同じね。
+  --save-dev と install --production とかの関係もあるけど、Bower にライブラリを公開するときに絡む話みたいなので放置。
+※uninstall の時も引数ややり方は同様。
+
+$ bower list
+でインストールしているライブラリの一覧表示。
+
+$ bower list -paths
+で、実際に参照すればいい dist ファイルが確認できる。
+
+$ bower info jquery
+でライブラリの情報。
+
+Bower は指定されたライブラリを git clone して持ってくるだけ。
+使う時は bower_components の中を指定しないといけないっぽい。
+
+Bootstrap があったので入れてみる。
+$ bower install bootstrap --save
+
+jQuery 最新版 (3系) があるとコンフリクトするので、さっき入れた jQuery は uninstall しておく。
+
+とりあえずこうやって必要なライブラリがホイホイ取り込めるツールなのね。
+よき場所に配置とかはしてくれないんすよねぇ。Gulp とか使ってビルドするために使うのが一般的な感じかしらね。

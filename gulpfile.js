@@ -9,5 +9,5 @@ gulp.task("build-js", function () {
   })
   .bundle()    // Browserify の実行
   .pipe(source("main.js"))    // Vinyl に変換
-  .pipe(gulp.dest("./"));    // 出力
+  .pipe(gulp.dest("./"));     // 出力
 });
