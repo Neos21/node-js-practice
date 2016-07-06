@@ -10043,10 +10043,11 @@ return jQuery;
 // Browserify で jQuery を読み込む
 var $ = require("jquery");
 
+/* src.js */
+
 // jQuery の使用テスト
 $(function() {
-  console.log("jQuery Test.");
-  $("<body>").append("<p>jQuery.");
+  $("body").css("color", "#333");
 });
 
 /* src.js */
