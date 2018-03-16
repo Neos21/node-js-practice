@@ -5,19 +5,19 @@
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Neos21GitHub/NodeJsTest.git"
+    "url": "git+https://github.com/Neos21/NodeJsTest.git"
   },
   "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Neos21GitHub/NodeJsTest/issues"
+    "url": "https://github.com/Neos21/NodeJsTest/issues"
   },
-  "homepage": "https://github.com/Neos21GitHub/NodeJsTest#readme",
+  "homepage": "https://github.com/Neos21/NodeJsTest#readme",
   "devDependencies": {
-    "browser-sync": "^2.13.0",
-    "browserify": "^13.0.1",
-    "gulp": "^3.9.1",
-    "jquery": "^3.0.0",
-    "vinyl-source-stream": "^1.1.0"
+    "browser-sync": "2.13.0",
+    "browserify": "13.0.1",
+    "gulp": "3.9.1",
+    "jquery": "3.0.0",
+    "vinyl-source-stream": "1.1.0"
   }
 }
