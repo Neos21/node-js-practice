@@ -1,4 +1,4 @@
-# Node.js Test
+# Node.js Practice
 
 Node.js と、それにまつわる JavaScript のライブラリを色々試してみるリポジトリです。
 
