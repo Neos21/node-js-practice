@@ -37,15 +37,15 @@ $ touch gulpfile.js
 以下のように書く。
 
 ```
-var gulp = require(“gulp”);
-var browserify = require(“browserify”);
+var gulp = require("gulp");
+var browserify = require("browserify");
 
 // 「build-js」がタスク名になる。「gulp build-js」で呼べる。
-gulp.task(“build-js”, function () {
+gulp.task("build-js", function () {
   return browserify({
-    entries: “./src.js” // どのファイルをビルドするか
+    entries: "./src.js" // どのファイルをビルドするか
   }).bundle()           // browserify の実行
-  .pipe(gulp.dest(“./main.js”)); // 出力するファイル
+  .pipe(gulp.dest("./main.js")); // 出力するファイル
 });
 ```
 
@@ -75,16 +75,16 @@ $ npm install vinyl-source-stream --save-dev
 これをインストールして、書き換えた。
 
 ```
-var gulp = require(“gulp”);
-var browserify = require(“browserify”);
-var source = require(“vinyl-source-stream”);
+var gulp = require("gulp");
+var browserify = require("browserify");
+var source = require("vinyl-source-stream");
 
-gulp.task(“build-js”, function () {
+gulp.task("build-js", function () {
   browserify({
-    entries: [“./src.js”]
+    entries: ["./src.js"]
   })
   .bundle()                // Browserify の実行
-  .pipe(source(“main.js”)) // 型変換がいるらしい
+  .pipe(source("main.js")) // 型変換がいるらしい
   .pipe(gulp.dest('./'));  // 出力
 });
 ```

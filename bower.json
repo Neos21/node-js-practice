@@ -1,6 +1,6 @@
 {
-  "name": "node-js-test",
-  "description": "Node.js Test",
+  "name": "practice-node-js",
+  "description": "Practice Node.js",
   "main": "index.js",
   "license": "ISC",
   "homepage": "",

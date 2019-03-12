@@ -1,18 +1,19 @@
 {
-  "name": "node-js-test",
+  "name": "practice-node-js",
   "version": "0.0.0",
-  "description": "Node.js Test",
+  "private": true,
+  "description": "Practice Node.js",
   "main": "main.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Neos21/NodeJsTest.git"
+    "url": "git+https://github.com/Neos21/practice-node-js.git"
   },
   "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Neos21/NodeJsTest/issues"
+    "url": "https://github.com/Neos21/practice-node-js/issues"
   },
-  "homepage": "https://github.com/Neos21/NodeJsTest#readme",
+  "homepage": "https://github.com/Neos21/practice-node-js#readme",
   "devDependencies": {
     "browser-sync": "2.13.0",
     "browserify": "13.0.1",
