@@ -1,19 +1,22 @@
 {
   "name": "practice-node-js",
-  "version": "0.0.0",
-  "private": true,
   "description": "Practice Node.js",
+  "private": true,
   "main": "main.js",
+  "author": "Neo <neos21@gmail.com> (https://neos21.net/)",
+  "license": "MIT",
+  "homepage": "https://github.com/Neos21/practice-node-js#readme",
+  "bugs": {
+    "url": "https://github.com/Neos21/practice-node-js/issues"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Neos21/practice-node-js.git"
   },
-  "author": "Neo <neos21@gmail.com> (http://neo.s21.xrea.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Neos21/practice-node-js/issues"
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Neos21"
   },
-  "homepage": "https://github.com/Neos21/practice-node-js#readme",
   "devDependencies": {
     "browser-sync": "2.13.0",
     "browserify": "13.0.1",
